@@ -1,10 +1,10 @@
 # Introduce.
 
-IOS가 하고 싶은 Android개발자의 개인공부 공간.
+IOS develop
 
 ## Project Name
 
-음성메모 App
+voiceMemo App
 
 
 ## Skills
