@@ -8,11 +8,31 @@
 import SwiftUI
 
 struct TodoView: View {
-    
+    @EnvironmentObject private var pathModel: PathModel
+    @EnvironmentObject private var todoListViewModel: TodoListViewModel
     @StateObject private var todoViewModel = TodoViewModel()
     
     var body: some View {
         VStack {
+            CustomNavigationBar(
+              leftBtnAction: {
+                pathModel.paths.removeLast()
+              },
+              rightBtnAction: {
+                todoListViewModel.addTodo(
+                  .init(
+                    title: todoViewModel.title,
+                    content: todoViewModel.content,
+                    time: todoViewModel.time,
+                    day: todoViewModel.day,
+                    selected: false
+                  )
+                )
+                pathModel.paths.removeLast()
+              },
+              rightBtnType: .create
+            )
+            
             TitleView()
                 .padding(.top,20)
             
@@ -30,12 +50,15 @@ struct TodoView: View {
             TodoContentView(todoViewModel: todoViewModel)
                 .padding(.leading,20)
             
-            Spacer()
+
+            SelectTimeview()
+
             
             SelectDayView(todoViewModel: todoViewModel)
                 .padding(.leading, 20)
             
             Spacer()
+
             
         }
     }
@@ -74,6 +97,39 @@ private struct TodoContentView : View {
     
     fileprivate var body: some View {
         TextField("내용을 입력하세요.", text: $todoViewModel.content)
+    }
+    
+}
+
+
+private struct SelectTimeview : View {
+    @ObservedObject private var todoViewModel = TodoViewModel()
+    
+    fileprivate init(todoViewModel: TodoViewModel = TodoViewModel()) {
+        self.todoViewModel = todoViewModel
+    }
+    
+    fileprivate var body: some View {
+        VStack {
+            Rectangle()
+                .fill(Color.customGray0)
+                .frame(height: 1)
+            
+            DatePicker(
+                "",
+                selection: $todoViewModel.time,
+                displayedComponents: [.hourAndMinute]
+            )
+            .labelsHidden()
+            .datePickerStyle(WheelDatePickerStyle())
+            .frame(maxWidth: .infinity, alignment: .center)
+            
+            Rectangle()
+                .fill(Color.customGray0)
+                .frame(height: 1)
+            
+            
+        }
     }
     
 }
@@ -122,21 +178,6 @@ private struct SelectDayView : View {
     }
 }
 
-//private struct OkBtnView : View {
-//    @ObservedObject private var todoViewMdoel : TodoViewModel
-//    
-//    fileprivate init(todoViewMdoel: TodoViewModel) {
-//        self.todoViewMdoel = todoViewMdoel
-//    }
-//    
-//    fileprivate var body: some View {
-//        VStack {
-//            Button("확인")
-//            
-//        }
-//    }
-//    
-//}
 
 
 struct TodoVie_Previews: PreviewProvider {

@@ -93,5 +93,8 @@ private struct SeperatorLineView : View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+            .environmentObject(PathModel())
+            .environmentObject(TodoListViewModel())
+            .environmentObject(MemoListViewModel())
     }
 }

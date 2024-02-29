@@ -10,33 +10,33 @@ import Foundation
 class HomeViewModel : ObservableObject {
     @Published var selectedTab : Tab
     @Published var todosCount : Int
-    @Published var memoCount : Int
-    @Published var voiceRecorderCount : Int
+    @Published var memosCount : Int
+    @Published var voiceRecordersCount : Int
     
     init(
         selectedTab : Tab = .voiceRecorder,
         todosCount : Int = 0,
-        memoCount : Int = 0,
-        voiceRecorderCount : Int = 0
+        memosCount : Int = 0,
+        voiceRecordersCount : Int = 0
     ){
         self.selectedTab = selectedTab
         self.todosCount = todosCount
-        self.memoCount = memoCount
-        self.voiceRecorderCount = voiceRecorderCount
+        self.memosCount = memosCount
+        self.voiceRecordersCount = voiceRecordersCount
     }
 }
 
 extension HomeViewModel {
-    func setTodoCount(_ count: Int){
+    func setTodosCount(_ count: Int){
         todosCount = count
     }
     
-    func setMemoCount(_ count: Int){
-        memoCount = count
+    func setMemosCount(_ count: Int){
+        memosCount = count
     }
     
     func setVoiceRecorderCount(_ count: Int){
-        voiceRecorderCount = count
+        voiceRecordersCount = count
     }
     
     func changeSelectedTab(_ tab : Tab){
