@@ -13,9 +13,9 @@ struct Memo : Hashable {
     var date : Date
     var id = UUID()
     
-//    var convertedDate: String {
-//      String("\(date.formattedDay) - \(date.formattedTime)")
-//    }
+    var convertedDate: String {
+      String("\(date.formattedDay) - \(date.formattedTime)")
+    }
 
     
 }

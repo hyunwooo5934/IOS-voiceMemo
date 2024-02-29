@@ -35,7 +35,7 @@ extension HomeViewModel {
         memosCount = count
     }
     
-    func setVoiceRecorderCount(_ count: Int){
+    func setVoiceRecordersCount(_ count: Int){
         voiceRecordersCount = count
     }
     

@@ -8,10 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B3467BE32B85BF7B0061B896 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3467BE22B85BF7B0061B896 /* LaunchScreen.storyboard */; };
+		B36F76DF2B901EE5001A8B62 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36F76DE2B901EE5001A8B62 /* Double+Extensions.swift */; };
 		B3A043042B8880E3003E49FA /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A043032B8880E3003E49FA /* Date+Extensions.swift */; };
 		B3A9F52A2B900428006B5998 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A9F5292B900428006B5998 /* Int+Extensions.swift */; };
-		B3A9F52E2B9004B3006B5998 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A9F52B2B9004B3006B5998 /* DataController.swift */; };
-		B3A9F52F2B9004B3006B5998 /* TodoMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3A9F52C2B9004B3006B5998 /* TodoMemo.xcdatamodeld */; };
 		B3A9F5472B90054A006B5998 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A9F53B2B90054A006B5998 /* Tab.swift */; };
 		B3A9F5482B90054A006B5998 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A9F53D2B90054A006B5998 /* Path.swift */; };
 		B3A9F5492B90054A006B5998 /* PathType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A9F53E2B90054A006B5998 /* PathType.swift */; };
@@ -69,10 +68,9 @@
 
 /* Begin PBXFileReference section */
 		B3467BE22B85BF7B0061B896 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B36F76DE2B901EE5001A8B62 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		B3A043032B8880E3003E49FA /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		B3A9F5292B900428006B5998 /* Int+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
-		B3A9F52B2B9004B3006B5998 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataController.swift; path = ../etc/voiceMemo/DataController.swift; sourceTree = "<group>"; };
-		B3A9F52D2B9004B3006B5998 /* TodomemoModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TodomemoModel.xcdatamodel; sourceTree = "<group>"; };
 		B3A9F53B2B90054A006B5998 /* Tab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		B3A9F53D2B90054A006B5998 /* Path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 		B3A9F53E2B90054A006B5998 /* PathType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathType.swift; sourceTree = "<group>"; };
@@ -149,8 +147,7 @@
 				B3A9F5432B90054A006B5998 /* Memo */,
 				B3A9F5452B90054A006B5998 /* Onboarding */,
 			);
-			name = Model;
-			path = ../../etc/voiceMemo/voiceMemo/Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		B3A9F53A2B90054A006B5998 /* Home */ = {
@@ -213,8 +210,7 @@
 				B3A9F5612B9005A1006B5998 /* Setting */,
 				B3A9F5632B9005A1006B5998 /* VoiceRecorder */,
 			);
-			name = Feature;
-			path = ../../etc/voiceMemo/voiceMemo/Feature;
+			path = Feature;
 			sourceTree = "<group>";
 		};
 		B3A9F54F2B9005A1006B5998 /* Home */ = {
@@ -238,8 +234,8 @@
 		B3A9F5552B9005A1006B5998 /* MemoList */ = {
 			isa = PBXGroup;
 			children = (
-				B3A9F5562B9005A1006B5998 /* MemoListViewModel.swift */,
 				B3A9F5572B9005A1006B5998 /* Memo */,
+				B3A9F5562B9005A1006B5998 /* MemoListViewModel.swift */,
 				B3A9F55A2B9005A1006B5998 /* MemoListView.swift */,
 			);
 			path = MemoList;
@@ -319,8 +315,6 @@
 		B3B012122B857A4900C4A734 = {
 			isa = PBXGroup;
 			children = (
-				B3A9F52B2B9004B3006B5998 /* DataController.swift */,
-				B3A9F52C2B9004B3006B5998 /* TodoMemo.xcdatamodeld */,
 				B3B0121D2B857A4900C4A734 /* voiceMemo */,
 				B3B0122E2B857A4A00C4A734 /* voiceMemoTests */,
 				B3B012382B857A4A00C4A734 /* voiceMemoUITests */,
@@ -403,6 +397,7 @@
 				B3A9F5292B900428006B5998 /* Int+Extensions.swift */,
 				B3B0124E2B858B6C00C4A734 /* Color+extensions.swift */,
 				B3A043032B8880E3003E49FA /* Date+Extensions.swift */,
+				B36F76DE2B901EE5001A8B62 /* Double+Extensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -546,6 +541,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B36F76DF2B901EE5001A8B62 /* Double+Extensions.swift in Sources */,
 				B3A9F56E2B9005A1006B5998 /* MemoViewModel.swift in Sources */,
 				B3A9F5772B9005A1006B5998 /* VoiceRecorderView.swift in Sources */,
 				B3B012602B85B67D00C4A734 /* AppDelegate.swift in Sources */,
@@ -555,7 +551,6 @@
 				B3A9F56B2B9005A1006B5998 /* TimerView.swift in Sources */,
 				B3A9F5782B9005A1006B5998 /* OnboardingView.swift in Sources */,
 				B3A9F5762B9005A1006B5998 /* VoiceRecorderViewModel.swift in Sources */,
-				B3A9F52E2B9004B3006B5998 /* DataController.swift in Sources */,
 				B3A9F5792B9005A1006B5998 /* OnboardingViewModel.swift in Sources */,
 				B3B012642B85B71500C4A734 /* NotificationService.swift in Sources */,
 				B3B0124F2B858B6C00C4A734 /* Color+extensions.swift in Sources */,
@@ -572,7 +567,6 @@
 				B3AE7AC42B86C51800A15CE2 /* CustomNavigationBar.swift in Sources */,
 				B3A9F56A2B9005A1006B5998 /* HomeView.swift in Sources */,
 				B3A9F56F2B9005A1006B5998 /* MemoView.swift in Sources */,
-				B3A9F52F2B9004B3006B5998 /* TodoMemo.xcdatamodeld in Sources */,
 				B3A9F5472B90054A006B5998 /* Tab.swift in Sources */,
 				B3A043042B8880E3003E49FA /* Date+Extensions.swift in Sources */,
 				B3AE7AC62B86C56B00A15CE2 /* NavigationBtnType.swift in Sources */,
@@ -905,20 +899,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		B3A9F52C2B9004B3006B5998 /* TodoMemo.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				B3A9F52D2B9004B3006B5998 /* TodomemoModel.xcdatamodel */,
-			);
-			currentVersion = B3A9F52D2B9004B3006B5998 /* TodomemoModel.xcdatamodel */;
-			name = TodoMemo.xcdatamodeld;
-			path = ../etc/voiceMemo/TodoMemo.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = B3B012132B857A4900C4A734 /* Project object */;
 }
