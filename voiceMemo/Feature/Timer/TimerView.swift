@@ -141,7 +141,7 @@ private struct TimerOperationView : View {
                     Text("\(timerViewModel.timeRemaining.formattedTimeString)")
                         .font(.system(size: 20))
                         .foregroundColor(.customBlack)
-                        .monospaced()
+//                        .monospaced()
                     
                     HStack(alignment: .bottom) {
                         Image(systemName: "bell.fill")
